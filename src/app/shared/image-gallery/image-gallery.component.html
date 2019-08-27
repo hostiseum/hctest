@@ -1,0 +1,4 @@
+<div class="d-flex flex-{{direction == 'Vertical' ? 'column' : 'row'}} bd-highlight mb-3">
+        <app-thumbnail-image *ngFor='let product of products' [product]="product" (notify)='onNotify($event)'>
+        </app-thumbnail-image>
+</div>
