@@ -35,10 +35,7 @@ export class ImageGalleryComponent implements AfterViewInit {
   }
 
    onSlide(slideEvent: NgbSlideEvent) {
-    console.log(this.products);
-    console.log(slideEvent);
     this.selectedProduct = this.products.find((e)=> e.productId == slideEvent.current);
-    console.log(this.selectedProduct);
     this.selectedProductChanged.emit(this.selectedProduct);
   }
 }
