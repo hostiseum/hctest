@@ -1,8 +1,11 @@
 export interface IProduct{
-    productId : number;
+    productId : string;
     productName : string;
     imageUrl : string;
+    fullImageUrl : string;
     productType : string;
+    price : number;
+    properties: string[];
 };
 
 // export class Shirt implements IProduct{

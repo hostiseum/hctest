@@ -2,10 +2,34 @@
 .icon {
     font-size: 100px;
     position: absolute;
-    top: -5%;
+    top: 51%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
-    height: 200px;
   }
+  
+  .icon-cuff {
+    font-size: 10px;
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    transform: translate(-50%, -70%);
+    -ms-transform: translate(-50%, -70%);
+    /*text-align: center;
+     height: 200px; */
+    width: 20px;
+  }
+
+  .img-shirt{
+    height: 490px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -200px;
+    margin-top:-245px;
+  }
+
+ .row{
+   width:750px;
+ }

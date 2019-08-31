@@ -14,6 +14,9 @@ export class SelectedShirtComponent  {
   @Input()
   SelectedTie : IProduct = null;
   
+  @Input()
+  SelectedCuff : IProduct = null;
+  
   constructor() { 
 
     console.log(this.SelectedShirt);

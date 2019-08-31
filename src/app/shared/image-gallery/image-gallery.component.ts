@@ -1,13 +1,20 @@
-import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, Output, EventEmitter, ViewChild, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { IProduct } from '../product';
 import { ProductService } from '../../products/product.service';
+import { NgbSlideEvent, NgbCarouselConfig, NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-image-gallery',
   templateUrl: './image-gallery.component.html',
-  styleUrls: ['./image-gallery.component.css']
+  styleUrls: ['./image-gallery.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
-export class ImageGalleryComponent {
+export class ImageGalleryComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+    this.togglePaused();
+  }
+
+  @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 
   @Input()
   products : IProduct[];
@@ -19,10 +26,25 @@ export class ImageGalleryComponent {
 
   @Output() selectedProductChanged : EventEmitter<IProduct> = new EventEmitter<IProduct>();
 
-  constructor(private productService : ProductService ) { }
+  constructor(private productService : ProductService ) {
+    //this.togglePaused();
+   }
 
-  onNotify(product : IProduct): void{
-    this.selectedProduct  = product;
+   togglePaused() {
+      this.carousel.pause();
+  }
+
+  onNotify(): void{
+    console.log("product");
+    /*this.selectedProduct  = product;
+    this.selectedProductChanged.emit(this.selectedProduct);*/
+  }
+
+  onSlide(slideEvent: NgbSlideEvent) {
+    console.log(this.products);
+    console.log(slideEvent);
+    this.selectedProduct = this.products.find((e)=> e.productId == slideEvent.current);
+    console.log(this.selectedProduct);
     this.selectedProductChanged.emit(this.selectedProduct);
   }
 }

@@ -2,4 +2,8 @@
     margin:10px;
 }
 
-
+.navbar-brand {
+    font-family: 'Times New Roman', Times, serif;
+    color:#001f49;
+    text-align: center
+}

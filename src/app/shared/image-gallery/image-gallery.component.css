@@ -1,0 +1,40 @@
+ .carousel {
+    background-color:#fff;
+    width:700px;
+    height: 375px;
+} 
+
+.carousel-indicators li{
+    background-color: #001f49;
+}
+
+.carousel-control-prev-icon{
+    background-image: url('/../assets/images/chevron_left.svg');
+    border:1px solid #001f49
+ }
+ .carousel-control-next-icon{
+   background-image: url('/../assets/images/chevron_right.svg');
+   border:1px solid #001f49
+ }
+
+.ul, li{
+    font-family: 'Times New Roman', Times, serif;
+    color: #001f49;
+    text-align: left;
+    flex-wrap: break-word;
+}
+button{
+    font-family: 'Times New Roman', Times, serif;
+    background: #001f49;
+    color:#fff;
+    font-size: 16px;
+    width: 150px;
+    height: 55px;
+    border: 0px;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: #001f49;
+    font-size: 24px;
+}
