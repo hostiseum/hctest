@@ -27,20 +27,14 @@ export class ImageGalleryComponent implements AfterViewInit {
   @Output() selectedProductChanged : EventEmitter<IProduct> = new EventEmitter<IProduct>();
 
   constructor(private productService : ProductService ) {
-    //this.togglePaused();
+   
    }
 
    togglePaused() {
       this.carousel.pause();
   }
 
-  onNotify(): void{
-    console.log("product");
-    /*this.selectedProduct  = product;
-    this.selectedProductChanged.emit(this.selectedProduct);*/
-  }
-
-  onSlide(slideEvent: NgbSlideEvent) {
+   onSlide(slideEvent: NgbSlideEvent) {
     console.log(this.products);
     console.log(slideEvent);
     this.selectedProduct = this.products.find((e)=> e.productId == slideEvent.current);

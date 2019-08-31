@@ -18,9 +18,5 @@ export class SelectedShirtComponent  {
   SelectedCuff : IProduct = null;
   
   constructor() { 
-
-    console.log(this.SelectedShirt);
   }
-
-
 }

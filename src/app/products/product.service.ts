@@ -6,9 +6,6 @@ import { IProduct } from '../shared/product';
 })
 export class ProductService {
 
-
-
-
   getShirts(): IProduct[]{
     return [
         {"productId" : "s001",
@@ -121,33 +118,4 @@ export class ProductService {
 
     ];
   }
-
-  // getSelectedShirt() : IProduct{
-  //   return   { "productId" : "s001",
-  //   "productName" : "Blue checks white Shirt",
-  //   "imageUrl" : "assets/shirts/s001.jpg",
-  //   "fullImageUrl" : "assets/shirts/s001_full.jpg",
-  //   "productType" : "shirt"
-  //   }
-  // }
-  
-
-  // getSelectedTie() : IProduct{
-  //   return   {"productId" : "t003",
-  //   "productName" : "Red tie",
-  //   "imageUrl" : "assets/ties/t003.png",
-  //   "fullImageUrl" : "assets/ties/t003_tie.png",
-  //   "productType" : "tie"
-  //   }
-  // }
-
-
-  // getSelectedCuff() : IProduct{
-  //   return   {"productId" : "c001",
-  //   "productName" : "gold",
-  //   "imageUrl" : "assets/cuffs/c001.jpg",
-  //   "fullImageUrl" : "assets/cuffs/c001_full.png",
-  //   "productType" : "cuff"
-  //   }
-  // }
 }
